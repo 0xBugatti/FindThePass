@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find The Pass</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            outline: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        #result {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Find The Pass</h1>
+    <h2>by @0xbugatti</h2>
+
+    <form id="hashForm">
+        <label for="word">Enter a word:</label>
+        <input type="text" id="word" name="word" placeholder="Type your password here" required>
+        <button type="submit">Check</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('hashForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const word = document.getElementById('word').value;
+
+            const response = await fetch('/check', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ word })
+            });
+
+            const result = await response.text();
+            const resultDiv = document.getElementById('result');
+
+            resultDiv.innerText = result;
+            if (result.includes("Congratulations")) {
+                resultDiv.style.color = "#4caf50"; // Green for success
+            } else {
+                resultDiv.style.color = "#ff3e3e"; // Red for failure
+            }
+        });
+    </script>
+</body>
+</html>
