@@ -2,9 +2,9 @@
 # Find the Pass
 
 
-Descryption Alternative Reverse Engineering Ctf LIKE Find the Pass For Cyber Talents CTF
-Category : RE
-Rate : EASY
+##### Descryption :Alternative Reverse Engineering Ctf LIKE Find the Pass For Cyber Talents CTF
+##### Category : RE
+##### Rate : EASY
 
 ![CTF](images/rectf.png)
 ## Steps to Solve 
