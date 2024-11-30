@@ -1,5 +1,4 @@
 
-@0xbugatti
 # Find the Pass
 Descryption Alternative Reverse Engineering Ctf LIKE Find the Pass For Cyber Talents CTF
 Category : RE
@@ -12,10 +11,10 @@ Rate : EASY
 ### Submit Here ![bugattiCTF](https://ctf-1.0xbugatti.com/)
 ![site](images/ftp.png)
 
-Credit
-@0xbugatti
 
-## Folllow  Me ON 
+### Credit: @0xbugatti
+
+## Folllow  Me:
 
 [![Medium](https://img.shields.io/badge/Medium-%2312100E.svg?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@0xbugatti)
 [![X (Twitter)](https://img.shields.io/badge/X-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/0xbugatti)
