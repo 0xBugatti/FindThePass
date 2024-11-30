@@ -4,6 +4,7 @@ Rate : EASY
 @0xbugatti
 ## Steps to Solve 
 
+![CTF](images/rectf.png)
 
 ### Crack the EXE to find
 ### Get the Password from RE Process 
