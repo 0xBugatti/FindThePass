@@ -8,7 +8,7 @@ Rate : EASY
 
 ### Crack the EXE to find
 ### Get the Password from RE Process 
-### Submit Here ![bugattiCTF](https://ctf-1.0xbugatti.com/)
+### Submit Here [bugattiCTF](https://ctf-1.0xbugatti.com/)
 ![site](images/ftp.png)
 
 
